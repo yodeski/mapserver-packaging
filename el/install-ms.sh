@@ -36,3 +36,12 @@ sudo chcon -t httpd_sys_content_t /var/www/appgiswms -R
 sudo chcon -t httpd_sys_rw_content_t /var/www/appgiswms -R
 sudo chcon -t httpd_sys_rw_content_t /var/www/appgiswms -R
 
+
+#postgresql
+sudo postgresql-setup initdb
+sudo systemctl enable postgresql
+
+#interactive psql with postgres user
+#sudo -i -u postgres
+
+
