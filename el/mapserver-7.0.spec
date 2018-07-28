@@ -28,7 +28,7 @@ BuildRequires:  python-devel curl-devel zlib-devel libxml2-devel
 BuildRequires:  libjpeg-devel libpng-devel libtiff-devel fribidi-devel giflib-devel
 BuildRequires:  harfbuzz-devel
 
-Requires:       osm2pgsql
+Requires:       postgresql-server postgresql-contrib osm2pgsql
 
 %define python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib(1)")
 
