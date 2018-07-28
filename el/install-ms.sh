@@ -38,6 +38,8 @@ sudo chcon -t httpd_sys_rw_content_t /var/www/appgiswms -R
 
 
 #postgresql
+#config files:
+#/var/lib/pgsql/data/pg_hba.conf
 sudo postgresql-setup initdb
 sudo systemctl enable postgresql
 
