@@ -19,3 +19,20 @@ sudo QA_RPATHS=$[ 0x0001|0x0002 ] rpmbuild -ba --target x86_64 mapserver-7.0.spe
  sudo cp libmapserver.so.7.0.0 /usr/lib64/
  
  
+#after create appgiswms directory
+sudo chown apache:apache -R /var/www/appgiswms
+cd /var/www/appgiswms
+ 
+# File permissions, recursive
+find . -type f -exec chmod 0644 {} \;
+ 
+# Dir permissions, recursive
+find . -type d -exec chmod 0755 {} \;
+ 
+# SELinux serve files off Apache, resursive
+sudo chcon -t httpd_sys_content_t /var/www/appgiswms -R
+ 
+# Allow write only to specific dirs
+sudo chcon -t httpd_sys_rw_content_t /var/www/appgiswms -R
+sudo chcon -t httpd_sys_rw_content_t /var/www/appgiswms -R
+
