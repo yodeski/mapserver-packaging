@@ -22,11 +22,13 @@ BuildRequires:  httpd-devel php-devel libxslt-devel pam-devel fcgi-devel
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  postgresql-devel mysql-devel
 BuildRequires:  swig > 1.3.24 java-1.7.0-openjdk-devel
-BuildRequires:  geos-devel proj-devel proj-epsg gdal-devel cairo-devel
+BuildRequires:  geos-devel proj-devel proj-epsg gdal-devel cairo-devel 
 BuildRequires:  freetype-devel gd-devel >= 2.0.16
 BuildRequires:  python-devel curl-devel zlib-devel libxml2-devel
 BuildRequires:  libjpeg-devel libpng-devel libtiff-devel fribidi-devel giflib-devel
 BuildRequires:  harfbuzz-devel
+
+Requires:       osm2pgsql
 
 %define python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib(1)")
 
