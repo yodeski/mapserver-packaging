@@ -49,5 +49,5 @@ sudo systemctl start postgresql
 #dir osm2pgsql style: /usr/share/osm2pgsql/
 
 #where are mapserver libs inatalled:
-#/root/rpmbuild/BUILD/mapserver-7.0.0/
+#/root/rpmbuild/BUILD/mapserver-7.0.0/build
 
