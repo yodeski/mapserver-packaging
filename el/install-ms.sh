@@ -43,5 +43,8 @@ sudo systemctl enable postgresql
 
 #interactive psql with postgres user
 #sudo -i -u postgres
+#dir osm2pgsql style: /usr/share/osm2pgsql/
 
+#where are mapserver libs inatalled:
+#/root/rpmbuild/BUILD/mapserver-7.0.0/
 
