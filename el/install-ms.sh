@@ -36,6 +36,12 @@ sudo chcon -t httpd_sys_content_t /var/www/appgiswms -R
 sudo chcon -t httpd_sys_rw_content_t /var/www/appgiswms -R
 sudo chcon -t httpd_sys_rw_content_t /var/www/appgiswms -R
 
+#Wheb Access Denied to connect to postgres db:
+#service httpd stop
+#service postgresql stop
+#setsebool -P httpd_can_network_connect 1
+#service httpd start
+#service postgresql start
 
 #postgresql
 #config files:
